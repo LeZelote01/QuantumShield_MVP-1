@@ -1,219 +1,354 @@
-# 🛡️ QuantumShield - Projet Complet Analysé et Réorganisé
+<div align="center">
 
-## 📋 Résumé de l'Analyse
+# 🛡️ QuantumShield
 
-J'ai analysé le projet QuantumShield original (MVP très complet) et l'ai réorganisé en phases progressives pour permettre un déploiement par étapes selon le budget disponible.
+### *Post-Quantum Cryptography Platform for IoT Security*
 
-## 📁 Structure du Projet
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/LeZelote01/QuantumShield_MVP-1)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110.1-009688.svg)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-19.0.0-61dafb.svg)](https://reactjs.org)
+[![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248.svg)](https://mongodb.com)
 
-```
-/app/
-├── 📄 MVP_PHASING_ROADMAP.md      # Plan complet de phasage (4 phases)
-├── 🗂️ phase1_mvp/                 # Phase 1 implémentée (Budget: 0€)
-│   ├── 📁 backend/                # FastAPI + Services essentiels
-│   ├── 📁 frontend/               # React + Interface moderne
-│   ├── 📄 README_PHASE1.md        # Documentation Phase 1
-│   └── 🚀 deploy_local.sh         # Script de déploiement
-└── 🗂️ [projet_original]/          # MVP complet original analysé
-```
+*Securing IoT devices against quantum computing threats through advanced post-quantum cryptography*
 
-## 🎯 Phase 1 MVP - Implémentée (Budget 0€)
+[🚀 **Live Demo**](http://localhost:3000) • [📖 **Documentation**](http://localhost:8001/docs) • [🎯 **Roadmap**](MVP_PHASING_ROADMAP.md) • [🐛 **Report Bug**](../../issues)
 
-### ✅ Fonctionnalités Développées
-
-#### 🔐 **Authentification & Sécurité**
-- Inscription/connexion utilisateurs
-- Authentification JWT sécurisée  
-- Profils utilisateurs avec wallet automatique
-- Interface moderne et responsive
-
-#### 🔑 **Cryptographie NTRU++**
-- Génération de clés 2048-bit
-- Chiffrement/déchiffrement sécurisé
-- Signature numérique et vérification
-- Interface de test complète
-- Métriques de performance
-
-#### 📱 **Gestion IoT Basique**
-- 3 types de dispositifs supportés:
-  - 🌡️ Smart Sensor (capteurs)
-  - 📹 Security Camera (caméras)
-  - 🏠 Smart Thermostat (thermostats)
-- Enregistrement avec clés cryptographiques
-- Monitoring heartbeat temps réel
-- Métriques et statuts des dispositifs
-
-#### 💰 **Système Tokens QS**
-- Solde utilisateur avec 50 QS initiaux
-- Récompenses automatiques:
-  - Inscription: +50 QS
-  - Bonus connexion: +5 QS  
-  - Enregistrement device: +10 QS
-  - Heartbeat quotidien: +1 QS
-- Historique des transactions
-- Informations marché
-
-#### 📊 **Dashboard Temps Réel**
-- Vue d'ensemble système
-- Statistiques utilisateur personnalisées
-- Activité récente détaillée
-- Métriques de performance réseau
-- Interface intuitive et moderne
-
-### 🏗️ **Architecture Technique Phase 1**
-
-#### Backend (FastAPI)
-- **server.py** - Serveur principal avec tous les endpoints
-- **5 services** - Auth, NTRU, Devices, Tokens, Dashboard
-- **routes.py** - API REST complète (40+ endpoints)
-- **models.py** - Modèles Pydantic optimisés
-- **database.py** - Connexion MongoDB
-
-#### Frontend (React 19)
-- **5 pages** - Home, Login, Register, Dashboard, Devices, Crypto, Tokens
-- **Composants** - Navbar, StatCard, LoadingSpinner, ProtectedRoute
-- **Services** - API client complet avec interceptors
-- **Contextes** - Gestion état authentification
-- **Tailwind CSS** - Design system cohérent
-
-### 💻 **Déploiement Gratuit (0€)**
-
-#### Hébergement Recommandé
-- **Frontend**: Vercel (gratuit)
-- **Backend**: Railway/Render (gratuit) 
-- **Database**: MongoDB Atlas (500MB gratuit)
-- **Domaine**: Sous-domaine gratuit
-
-#### Test Local
-```bash
-cd /app/phase1_mvp
-./deploy_local.sh
-```
-- Backend: http://localhost:8001
-- Frontend: http://localhost:3001
-- API Docs: http://localhost:8001/docs
-
-## 🗺️ Roadmap Complète (4 Phases)
-
-### **Phase 1 (0€) - ✅ IMPLÉMENTÉE**
-MVP minimal avec fonctionnalités core
-
-### **Phase 2 (15€/mois) - 📋 PLANIFIÉE**
-- Blockchain privée avec Proof of Work
-- Mining distribué avec pool
-- 5 types de dispositifs supplémentaires
-- Détection d'anomalies basique
-- Domaine personnalisé
-
-### **Phase 3 (60€/mois) - 📋 PLANIFIÉE**  
-- Cryptographie avancée multi-algorithmes
-- Sécurité renforcée (2FA, audit)
-- Analytics et IA basiques  
-- Premières intégrations (MQTT, CoAP)
-- Infrastructure VPS
-
-### **Phase 4 (200€+/mois) - 📋 PLANIFIÉE**
-Toutes les fonctionnalités du projet original:
-- Blockchain enterprise (PoW + PoS)
-- 22 services backend complets
-- IA/ML avancée
-- Intégrations cloud (AWS, Azure, GCP)
-- Connecteurs ERP/CRM
-- Conformité GDPR/CCPA
-- Infrastructure scalable
-
-## 🎯 **Objectifs Atteints**
-
-### ✅ **Analyse Complète**
-- Projet original entièrement analysé
-- Architecture et fonctionnalités comprises
-- 22 services backend identifiés
-- Dépendances et intégrations mappées
-
-### ✅ **Plan de Phasage Intelligent**  
-- 4 phases logiques définies
-- Budget progressif de 0€ à 200€+
-- Fonctionnalités priorisées par valeur
-- Migration entre phases planifiée
-
-### ✅ **Phase 1 Complète**
-- MVP fonctionnel développé
-- Interface utilisateur moderne
-- API REST complète (40+ endpoints)
-- Documentation détaillée
-- Script de déploiement
-
-### ✅ **Déploiement 0€ Possible**
-- Stack optimisée pour le gratuit
-- Hébergement cloud gratuit configuré
-- MongoDB Atlas gratuit intégré
-- Domaines gratuits supportés
-
-## 📊 **Comparaison Phases**
-
-| Fonctionnalité | Phase 1 | Phase 2 | Phase 3 | Phase 4 |
-|----------------|---------|---------|---------|---------|
-| **Budget** | 0€ | ~15€ | ~60€ | 200€+ |
-| **Services Backend** | 5 | 8 | 15 | 22 |
-| **Types IoT** | 3 | 8 | 8 | 8 |
-| **Crypto** | NTRU++ | NTRU++ | Multi-algo | Complet |
-| **Blockchain** | ❌ | ✅ | ✅ | Enterprise |
-| **Mining** | ❌ | ✅ | ✅ | Distribué |
-| **IA/ML** | ❌ | Basique | Avancé | Complet |
-| **Intégrations** | ❌ | ❌ | MQTT/CoAP | Toutes |
-
-## 🚀 **Prochaines Étapes Recommandées**
-
-### 1. **Tester Phase 1** ✅
-```bash
-cd /app/phase1_mvp
-./deploy_local.sh
-```
-
-### 2. **Déployer en Prod Gratuite** 
-- Créer compte Vercel + Railway + MongoDB Atlas
-- Configurer variables d'environnement
-- Déployer Phase 1 MVP
-
-### 3. **Collecter Feedback Utilisateurs**
-- Tester avec de vrais utilisateurs
-- Identifier points d'amélioration
-- Valider concept et interface
-
-### 4. **Planifier Phase 2**
-- Sécuriser budget (~15€/mois)
-- Développer blockchain et mining
-- Ajouter types de dispositifs
-
-## 📞 **Support & Ressources**
-
-### 📚 **Documentation**
-- `/app/MVP_PHASING_ROADMAP.md` - Plan complet 4 phases
-- `/app/phase1_mvp/README_PHASE1.md` - Guide Phase 1
-- `http://localhost:8001/docs` - API Documentation
-
-### 🛠️ **Développement**
-- Phase 1 complètement fonctionnelle
-- Code modulaire et extensible  
-- Architecture prête pour Phase 2
-- Tests et déploiement validés
-
-### 💡 **Conseils Étudiant**
-- Commencer par Phase 1 (gratuit)
-- Tester et valider concept
-- Chercher feedback utilisateurs
-- Évolution progressive selon budget
+</div>
 
 ---
 
-## ✨ **Résultat Final**
+## 🎯 **Overview**
 
-**✅ Mission Accomplie**: Le projet QuantumShield original (MVP très complexe) a été analysé, compris, et réorganisé en un plan de développement progressif adapté à un budget étudiant, avec la **Phase 1 MVP entièrement implémentée et déployable gratuitement**.
+**QuantumShield** is a cutting-edge **post-quantum cryptography platform** designed to protect IoT devices from future quantum computing attacks. Built with modern web technologies, it provides enterprise-grade security through **NTRU++ cryptographic algorithms** while maintaining an intuitive user experience.
 
-L'étudiant peut maintenant:
-1. **Déployer la Phase 1** immédiatement (0€)
-2. **Démontrer le concept** QuantumShield  
-3. **Évoluer progressivement** vers le projet complet
-4. **Adapter selon son budget** et ses besoins
+### 🌟 **Why QuantumShield?**
 
-**🛡️ QuantumShield Phase 1 MVP - Sécurité Post-Quantique Accessible à Tous** 🚀
+- 🔐 **Quantum-Resistant**: Built with NTRU++ post-quantum cryptography
+- 📱 **IoT-Focused**: Specialized for smart device security management  
+- 💰 **Token Economy**: Gamified security with QS rewards system
+- 🚀 **Modern Stack**: FastAPI + React 19 + MongoDB
+- 🆓 **Zero Cost**: Deployable with free hosting solutions
+
+---
+
+## ✨ **Key Features**
+
+### 🔐 **Post-Quantum Cryptography**
+- **NTRU++** algorithm implementation with 2048-bit keys
+- Advanced encryption/decryption capabilities
+- Digital signature creation and verification
+- Performance metrics and benchmarking
+
+### 📱 **IoT Device Management** 
+- Support for **3 device types**: Smart Sensors, Security Cameras, Smart Thermostats
+- Real-time heartbeat monitoring
+- Device status management (Active/Inactive/Maintenance)
+- Cryptographic key assignment for each device
+
+### 💰 **QS Token Economy**
+- Automated reward system for user engagement
+- **50 QS** initial balance + **5 QS** login bonus
+- **+10 QS** per device registration
+- **+1 QS** per daily heartbeat
+- Complete transaction history tracking
+
+### 📊 **Real-Time Dashboard**
+- Live system metrics and performance indicators
+- User activity feed with detailed timestamps
+- Device health monitoring and alerts
+- Interactive statistics and visualizations
+
+### 🔒 **Security & Authentication**
+- JWT-based secure authentication
+- Protected routes and role-based access
+- Encrypted wallet generation
+- Session management and token refresh
+
+---
+
+## 🏗️ **Architecture**
+
+<div align="center">
+
+```mermaid
+graph TB
+    A[React Frontend] --> B[FastAPI Backend]
+    B --> C[MongoDB Database]
+    B --> D[NTRU++ Crypto Engine]
+    B --> E[JWT Authentication]
+    B --> F[Device Manager]
+    B --> G[Token System]
+    
+    subgraph "Security Layer"
+        D
+        E
+    end
+    
+    subgraph "Business Logic"
+        F
+        G
+    end
+```
+
+</div>
+
+### 🔧 **Tech Stack**
+
+| Component | Technology | Version | Purpose |
+|-----------|------------|---------|---------|
+| **Frontend** | React | 19.0.0 | Modern UI with Tailwind CSS |
+| **Backend** | FastAPI | 0.110.1 | High-performance API server |
+| **Database** | MongoDB | 6.0+ | Document-based data storage |
+| **Crypto** | NTRU++ | Custom | Post-quantum cryptography |
+| **Auth** | JWT | - | Secure token-based authentication |
+
+---
+
+## 🚀 **Quick Start**
+
+### **Prerequisites**
+```bash
+Node.js 18+    # Frontend runtime
+Python 3.11+   # Backend runtime  
+MongoDB 6.0+   # Database server
+Git            # Version control
+```
+
+### **Installation**
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/LeZelote01/QuantumShield_MVP-1.git
+   cd QuantumShield_MVP-1
+   ```
+
+2. **Setup Backend**
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   # venv\Scripts\activate   # Windows
+   pip install -r requirements.txt
+   ```
+
+3. **Setup Frontend**
+   ```bash
+   cd ../frontend
+   yarn install
+   ```
+
+4. **Configure Environment**
+   ```bash
+   # Backend .env
+   cp backend/.env.example backend/.env
+   
+   # Frontend .env  
+   cp frontend/.env.example frontend/.env
+   ```
+
+5. **Start Services**
+   ```bash
+   # Terminal 1: Start Backend
+   cd backend && python server.py
+   
+   # Terminal 2: Start Frontend
+   cd frontend && yarn start
+   ```
+
+6. **Access Application**
+   - 🎨 **Frontend**: http://localhost:3000
+   - ⚙️ **Backend API**: http://localhost:8001
+   - 📖 **API Docs**: http://localhost:8001/docs
+
+---
+
+## 📱 **Usage Examples**
+
+### **User Registration**
+```javascript
+// Create account with automatic QS rewards
+const response = await fetch('/api/auth/register', {
+  method: 'POST',
+  body: JSON.stringify({
+    username: 'alice',
+    email: 'alice@example.com', 
+    password: 'SecurePass123!'
+  })
+});
+// Result: 50 QS initial + 5 QS bonus = 55 QS total
+```
+
+### **Device Registration**
+```javascript
+// Register IoT device with crypto keys
+const device = await fetch('/api/devices/register', {
+  method: 'POST',
+  body: JSON.stringify({
+    device_id: 'sensor-001',
+    device_name: 'Temperature Sensor',
+    device_type: 'Smart Sensor'
+  })
+});
+// Result: Device registered + 10 QS reward
+```
+
+### **NTRU++ Encryption**
+```javascript
+// Generate quantum-resistant keys
+const keyPair = await fetch('/api/crypto/generate-keys', {
+  method: 'POST',
+  body: JSON.stringify({ key_size: 2048 })
+});
+
+// Encrypt sensitive data
+const encrypted = await fetch('/api/crypto/encrypt', {
+  method: 'POST', 
+  body: JSON.stringify({
+    data: 'Secret IoT telemetry data',
+    public_key: keyPair.public_key
+  })
+});
+```
+
+---
+
+## 🗂️ **Project Structure**
+
+```
+QuantumShield/
+├── 📁 backend/               # FastAPI Application
+│   ├── server.py            # Main application entry
+│   ├── routes.py            # API endpoint definitions  
+│   ├── models.py            # Pydantic data models
+│   ├── database.py          # MongoDB connection
+│   ├── auth_service.py      # Authentication logic
+│   ├── ntru_service.py      # Post-quantum crypto
+│   ├── device_service.py    # IoT device management
+│   ├── token_service.py     # QS token system
+│   └── dashboard_service.py # Analytics & metrics
+├── 📁 frontend/             # React Application  
+│   ├── src/
+│   │   ├── pages/          # Main application pages
+│   │   ├── components/     # Reusable UI components
+│   │   ├── services/       # API integration layer
+│   │   └── contexts/       # React state management
+│   └── public/             # Static assets
+├── 📁 Mobile/              # React Native (Future)
+└── 📄 MVP_PHASING_ROADMAP.md # Development roadmap
+```
+
+---
+
+## 🧪 **API Documentation**
+
+### **Authentication Endpoints**
+| Endpoint | Method | Description | Response |
+|----------|--------|-------------|----------|
+| `/api/auth/register` | POST | Create new user account | User profile + JWT |
+| `/api/auth/login` | POST | Authenticate user | Access token + profile |
+| `/api/auth/profile` | GET | Get current user info | User details |
+
+### **Cryptography Endpoints**
+| Endpoint | Method | Description | Response |
+|----------|--------|-------------|----------|
+| `/api/crypto/generate-keys` | POST | Generate NTRU++ key pair | Public/Private keys |
+| `/api/crypto/encrypt` | POST | Encrypt data | Encrypted payload |
+| `/api/crypto/decrypt` | POST | Decrypt data | Original plaintext |
+| `/api/crypto/sign` | POST | Create digital signature | Signature string |
+| `/api/crypto/verify` | POST | Verify signature | Boolean result |
+
+### **Device Management Endpoints**
+| Endpoint | Method | Description | Response |
+|----------|--------|-------------|----------|
+| `/api/devices/register` | POST | Register IoT device | Device profile + 10 QS |
+| `/api/devices/` | GET | List user devices | Device array |
+| `/api/devices/{id}/heartbeat` | POST | Send device status | Heartbeat + 1 QS |
+| `/api/devices/{id}/metrics` | GET | Get device analytics | Metrics object |
+
+---
+
+## 📈 **Development Roadmap**
+
+| Phase | Budget | Timeline | Key Features |
+|-------|--------|----------|--------------|
+| **Phase 1** ✅ | **$0/month** | *Completed* | Core MVP, 3 IoT types, NTRU++, QS tokens |
+| **Phase 2** 🚧 | **$15/month** | *Q2 2025* | Blockchain, mining, 8 IoT types, anomaly detection |  
+| **Phase 3** 📋 | **$60/month** | *Q3 2025* | Multi-algo crypto, 2FA, ML analytics, MQTT/CoAP |
+| **Phase 4** 🎯 | **$200+/month** | *Q4 2025* | Enterprise features, cloud integrations, full AI/ML |
+
+*See [MVP_PHASING_ROADMAP.md](MVP_PHASING_ROADMAP.md) for detailed roadmap*
+
+---
+
+## 🤝 **Contributing**
+
+We welcome contributions from the community! Here's how to get started:
+
+### **Development Setup**
+```bash
+# Fork the repository
+git clone https://github.com/your-username/QuantumShield_MVP-1.git
+
+# Create feature branch  
+git checkout -b feature/amazing-feature
+
+# Make your changes and test thoroughly
+python -m pytest backend/tests/
+yarn test --coverage
+
+# Commit with conventional commits
+git commit -m "feat: add quantum key rotation feature"
+
+# Push and create Pull Request
+git push origin feature/amazing-feature
+```
+
+### **Guidelines**
+- ✅ Follow [Conventional Commits](https://conventionalcommits.org/)
+- ✅ Add tests for new features 
+- ✅ Update documentation accordingly
+- ✅ Ensure all tests pass before submitting PR
+
+---
+
+## 📄 **License**
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 **Acknowledgments**
+
+- **NTRU Cryptography**: Based on post-quantum cryptographic research
+- **FastAPI**: High-performance web framework for building APIs
+- **React Community**: Modern frontend development ecosystem
+- **MongoDB**: Flexible document database for IoT data
+- **Tailwind CSS**: Utility-first CSS framework
+
+---
+
+## 📞 **Support & Contact**
+
+<div align="center">
+
+### **Need Help?**
+
+[![GitHub Issues](https://img.shields.io/github/issues/LeZelote01/QuantumShield_MVP-1.svg)](../../issues)
+[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-blue.svg)](../../discussions)
+
+**💬 Community**: [GitHub Discussions](../../discussions) • **🐛 Bug Reports**: [GitHub Issues](../../issues) • **📧 Email**: [contact@quantumshield.io](mailto:contact@quantumshield.io)
+
+</div>
+
+---
+
+<div align="center">
+
+### **⭐ Star this repository if you find it helpful!**
+
+**Built with ❤️ for the post-quantum future**
+
+*QuantumShield - Protecting IoT devices from quantum computing threats*
+
+</div>
