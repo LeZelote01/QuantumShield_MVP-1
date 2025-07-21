@@ -32,7 +32,7 @@ class NTRUService:
             public_key = private_key.public_key()
             
             # Sérialiser les clés
-            private_pem = private_key.private_key_pem = private_key.private_bytes(
+            private_pem = private_key.private_bytes(
                 encoding=serialization.Encoding.PEM,
                 format=serialization.PrivateFormat.PKCS8,
                 encryption_algorithm=serialization.NoEncryption()
