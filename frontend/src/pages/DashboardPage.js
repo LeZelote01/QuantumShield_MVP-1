@@ -91,7 +91,7 @@ const DashboardPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
           title="Solde QS"
-          value={`${user_info.qs_balance.toFixed(2)}`}
+          value={`${token_info.balance.toFixed(2)}`}
           subtitle="QuantumShield Tokens"
           icon={CurrencyDollarIcon}
           color="quantum"
