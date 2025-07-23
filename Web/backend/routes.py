@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from models import (
     UserCreate, UserLogin, UserProfile,
     NTRUKeyPair, EncryptionRequest, DecryptionRequest,
-    DeviceCreate, DeviceHeartbeat, DeviceStatus
+    DeviceCreate, DeviceHeartbeat, DeviceStatus, DeviceStatusUpdate
 )
 from auth_service import AuthService
 from ntru_service import NTRUService
