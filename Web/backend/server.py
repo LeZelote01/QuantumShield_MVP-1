@@ -3,6 +3,7 @@ from starlette.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import logging
 from token_service import TokenService
+import os
 
 # Initialiser les services
 token_service = TokenService()
