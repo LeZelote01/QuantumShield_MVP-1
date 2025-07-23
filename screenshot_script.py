@@ -34,7 +34,7 @@ class QuantumShieldScreenshots:
     async def screenshot(self, name: str, description: str = ""):
         """Take a screenshot"""
         filepath = os.path.join(self.screenshots_dir, f"{name}.png")
-        await self.page.screenshot(path=filepath, full_page=True, quality=95)
+        await self.page.screenshot(path=filepath, full_page=True)
         print(f"📸 {name}.png - {description}")
         await asyncio.sleep(1)
 
