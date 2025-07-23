@@ -9,6 +9,9 @@ class DeviceStatus(str, Enum):
     INACTIVE = "inactive"
     MAINTENANCE = "maintenance"
 
+class DeviceStatusUpdate(BaseModel):
+    status: DeviceStatus
+
 class TransactionType(str, Enum):
     REWARD = "reward"
     DEVICE_REGISTRATION = "device_registration"

@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from models import (
     UserCreate, UserLogin, UserProfile,
     NTRUKeyPair, EncryptionRequest, DecryptionRequest,
-    DeviceCreate, DeviceHeartbeat, DeviceStatus
+    DeviceCreate, DeviceHeartbeat, DeviceStatus, DeviceStatusUpdate
 )
 from auth_service import AuthService
 from ntru_service import NTRUService
@@ -246,10 +246,10 @@ async def get_device_metrics(device_id: str, current_user = Depends(get_current_
         raise HTTPException(status_code=400, detail=str(e))
 
 @device_router.put("/{device_id}/status")
-async def update_device_status(device_id: str, new_status: DeviceStatus, current_user = Depends(get_current_user)):
+async def update_device_status(device_id: str, status_update: DeviceStatusUpdate, current_user = Depends(get_current_user)):
     """Met à jour le statut d'un dispositif"""
     try:
-        result = await device_service.update_device_status(device_id, new_status, current_user["id"])
+        result = await device_service.update_device_status(device_id, status_update.status, current_user["id"])
         return result
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
