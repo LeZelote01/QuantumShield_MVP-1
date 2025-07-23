@@ -58,7 +58,7 @@ class QuantumShieldTester:
         filename = f"{timestamp}_{name}.png"
         filepath = os.path.join(self.screenshots_dir, filename)
         
-        await self.page.screenshot(path=filepath, full_page=True, quality=90)
+        await self.page.screenshot(path=filepath, full_page=True)
         print(f"📸 Screenshot: {filename} - {description}")
         await asyncio.sleep(2)  # Pause for video recording
 
