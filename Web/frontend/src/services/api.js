@@ -138,7 +138,7 @@ export const devicesAPI = {
   },
 
   updateStatus: async (deviceId, newStatus) => {
-    const response = await api.put(`/devices/${deviceId}/status`, newStatus);
+    const response = await api.put(`/devices/${deviceId}/status`, { value: newStatus });
     return response.data;
   },
 
