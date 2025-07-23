@@ -1,0 +1,412 @@
+/* QuantumShield PDF Styling */
+/* Pour une meilleure conversion Markdown → PDF */
+
+/* === CONFIGURATION GÉNÉRALE === */
+@page {
+    margin: 2cm 2.5cm;
+    size: A4;
+    
+    @top-center {
+        content: "QuantumShield - Documentation Confidentielle";
+        font-size: 10pt;
+        font-family: 'Segoe UI', sans-serif;
+        color: #6B7280;
+        border-bottom: 1px solid #E5E7EB;
+        padding-bottom: 5pt;
+    }
+    
+    @bottom-right {
+        content: "Page " counter(page) " sur " counter(pages);
+        font-size: 9pt;
+        color: #6B7280;
+    }
+}
+
+/* === TYPOGRAPHIE === */
+body {
+    font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #1F2937;
+    background: white;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* === TITRES === */
+h1 {
+    color: #0284C7;
+    font-size: 24pt;
+    font-weight: 700;
+    margin: 30pt 0 20pt 0;
+    padding-bottom: 10pt;
+    border-bottom: 3px solid #0284C7;
+    page-break-after: avoid;
+}
+
+h2 {
+    color: #0369A1;
+    font-size: 18pt;
+    font-weight: 600;
+    margin: 25pt 0 15pt 0;
+    page-break-after: avoid;
+}
+
+h3 {
+    color: #0284C7;
+    font-size: 14pt;
+    font-weight: 600;
+    margin: 20pt 0 10pt 0;
+    page-break-after: avoid;
+}
+
+h4 {
+    color: #1F2937;
+    font-size: 12pt;
+    font-weight: 600;
+    margin: 15pt 0 8pt 0;
+}
+
+/* === PARAGRAPHES === */
+p {
+    margin: 0 0 12pt 0;
+    text-align: justify;
+    orphans: 2;
+    widows: 2;
+}
+
+/* === LISTES === */
+ul, ol {
+    margin: 10pt 0;
+    padding-left: 20pt;
+}
+
+li {
+    margin: 5pt 0;
+    line-height: 1.5;
+}
+
+/* Listes imbriquées */
+ul ul, ol ol, ul ol, ol ul {
+    margin: 5pt 0;
+}
+
+/* === TABLEAUX === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15pt 0;
+    font-size: 10pt;
+    page-break-inside: avoid;
+}
+
+th {
+    background: #0284C7;
+    color: white;
+    font-weight: 600;
+    padding: 8pt 10pt;
+    border: 1px solid #0369A1;
+    text-align: left;
+}
+
+td {
+    padding: 6pt 10pt;
+    border: 1px solid #D1D5DB;
+    vertical-align: top;
+}
+
+/* Alternance couleurs lignes */
+tr:nth-child(even) {
+    background: #F8FAFC;
+}
+
+/* === CODE === */
+code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 9pt;
+    background: #F3F4F6;
+    padding: 2pt 4pt;
+    border-radius: 3pt;
+    color: #1F2937;
+}
+
+pre {
+    background: #F8FAFC;
+    border: 1px solid #E5E7EB;
+    border-radius: 5pt;
+    padding: 10pt;
+    margin: 10pt 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 9pt;
+    line-height: 1.4;
+    overflow: auto;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* === ÉLÉMENTS SPÉCIAUX === */
+
+/* Badges/Labels */
+.badge {
+    display: inline-block;
+    padding: 2pt 6pt;
+    font-size: 8pt;
+    font-weight: 600;
+    border-radius: 10pt;
+    color: white;
+}
+
+.badge-success { background: #10B981; }
+.badge-warning { background: #F59E0B; }
+.badge-info { background: #3B82F6; }
+.badge-danger { background: #EF4444; }
+
+/* Highlights */
+.highlight {
+    background: #FEF3C7;
+    padding: 1pt 3pt;
+    border-radius: 2pt;
+}
+
+/* Call-outs */
+.callout {
+    border-left: 4pt solid #0284C7;
+    background: #F0F9FF;
+    padding: 10pt 15pt;
+    margin: 15pt 0;
+    border-radius: 0 5pt 5pt 0;
+}
+
+.callout-warning {
+    border-left-color: #F59E0B;
+    background: #FFFBEB;
+}
+
+.callout-success {
+    border-left-color: #10B981;
+    background: #ECFDF5;
+}
+
+/* === LIENS === */
+a {
+    color: #0284C7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Liens externes avec icône */
+a[href^="http"]::after {
+    content: " 🔗";
+    font-size: 8pt;
+    color: #6B7280;
+}
+
+/* === IMAGES === */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15pt auto;
+    border-radius: 5pt;
+}
+
+/* === CITATIONS === */
+blockquote {
+    border-left: 4pt solid #D1D5DB;
+    margin: 15pt 0;
+    padding: 10pt 20pt;
+    background: #F9FAFB;
+    font-style: italic;
+    color: #4B5563;
+}
+
+/* === SÉPARATEURS === */
+hr {
+    border: none;
+    border-top: 2pt solid #E5E7EB;
+    margin: 25pt 0;
+}
+
+/* === PAGE BREAKS === */
+.page-break {
+    page-break-before: always;
+}
+
+.no-break {
+    page-break-inside: avoid;
+}
+
+/* === ÉLÉMENTS QUANTUMSHIELD SPÉCIFIQUES === */
+
+/* Logo/Branding section */
+.brand-header {
+    text-align: center;
+    padding: 20pt 0;
+    border-bottom: 2pt solid #0284C7;
+    margin-bottom: 30pt;
+}
+
+.brand-header h1 {
+    font-size: 32pt;
+    color: #0284C7;
+    margin: 0;
+    border: none;
+}
+
+.brand-header .tagline {
+    font-size: 12pt;
+    color: #6B7280;
+    font-weight: 300;
+    margin: 5pt 0 0 0;
+}
+
+/* Métriques financières */
+.financial-metrics {
+    background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+    border: 1pt solid #0284C7;
+    border-radius: 8pt;
+    padding: 15pt;
+    margin: 15pt 0;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5pt 0;
+}
+
+.metric-label {
+    font-weight: 600;
+    color: #1F2937;
+}
+
+.metric-value {
+    font-weight: 700;
+    color: #0284C7;
+}
+
+/* Status indicators */
+.status-complete::before { content: "✅ "; }
+.status-progress::before { content: "🚧 "; }
+.status-planned::before { content: "📋 "; }
+.status-future::before { content: "🎯 "; }
+
+/* Priorité niveaux */
+.priority-high {
+    color: #EF4444;
+    font-weight: 600;
+}
+
+.priority-medium {
+    color: #F59E0B;
+    font-weight: 500;
+}
+
+.priority-low {
+    color: #10B981;
+    font-weight: 400;
+}
+
+/* === RESPONSIVE POUR IMPRESSION === */
+@media print {
+    body {
+        font-size: 10pt;
+        line-height: 1.4;
+    }
+    
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 13pt; }
+    
+    /* Éviter coupures importantes */
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+    
+    table, figure, img {
+        page-break-inside: avoid;
+    }
+    
+    /* Liens en noir pour impression */
+    a {
+        color: #1F2937;
+        text-decoration: underline;
+    }
+    
+    /* Cacher éléments non nécessaires */
+    .no-print {
+        display: none;
+    }
+}
+
+/* === TABLE OF CONTENTS === */
+.toc {
+    background: #F8FAFC;
+    border: 1pt solid #E5E7EB;
+    border-radius: 8pt;
+    padding: 20pt;
+    margin: 20pt 0;
+    page-break-inside: avoid;
+}
+
+.toc h2 {
+    margin-top: 0;
+    color: #1F2937;
+    border-bottom: 1pt solid #D1D5DB;
+    padding-bottom: 10pt;
+}
+
+.toc ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc li {
+    margin: 8pt 0;
+    position: relative;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #1F2937;
+}
+
+.toc a:hover {
+    color: #0284C7;
+}
+
+/* === FOOTER INFO === */
+.document-footer {
+    margin-top: 30pt;
+    padding-top: 15pt;
+    border-top: 1pt solid #E5E7EB;
+    text-align: center;
+    font-size: 9pt;
+    color: #6B7280;
+}
+
+/* === CONFIDENTIALITY NOTICE === */
+.confidential {
+    background: #FEF2F2;
+    border: 2pt solid #EF4444;
+    border-radius: 8pt;
+    padding: 15pt;
+    margin: 20pt 0;
+    text-align: center;
+    font-weight: 600;
+    color: #991B1B;
+}
+
+/* === ANIMATIONS (supprimées pour PDF) === */
+* {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
